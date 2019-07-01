@@ -1,0 +1,38 @@
+﻿<Window x:Class="memo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xml:lang="ja-JP"
+        xmlns:local="clr-namespace:memo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.501,0.695">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <ToolBar Name="MainToolBar" Margin="0,0,0,285">
+                <Button x:Name="OpenFile_ToolBar" ToolTip="名前を付けて保存" Height="23" Margin="0,4,0,2" Width="23" RenderTransformOrigin="2.375,1" Click="OpenButton_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="OpenIcon.png"/>
+                    </Button.Background>
+                </Button>
+            </ToolBar>
+        </DockPanel>
+        <Button x:Name="OpenButton" Content="ファイルを開く" HorizontalAlignment="Left" Margin="555,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="227" Height="80" Click="OpenButton_Click"/>
+        <Button x:Name="NameSaveButton" Content="名前をつけて保存" HorizontalAlignment="Left" Margin="314,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="227" Height="80" Click="NameSaveButton_Click"/>
+        <Button x:Name="ToolButton" Content="ツールバー" HorizontalAlignment="Left" Margin="24,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="ToolButton_Click"/>
+        <RichTextBox x:Name="MemoTextBox" HorizontalAlignment="Left" Height="276" Margin="13,33,0,0" VerticalAlignment="Top" Width="772" FontFamily="Arial">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="aaa"/>
+                    <Run Text="a"/>
+                    <Run Text="aaaaaaあ"/>
+                    <Run Text="あああ"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>

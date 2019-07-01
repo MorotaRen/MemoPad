@@ -1,0 +1,15 @@
+﻿<Window x:Class="memo.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:memo"
+        mc:Ignorable="d"
+        Title="Window1" Height="197" Width="488">
+    <Grid Margin="0,0,136,104">
+        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="フォントサイズ" VerticalAlignment="Top" Width="120" Margin="10,31,0,0" FlowDirection="RightToLeft" TextAlignment="Center" BorderBrush="{x:Null}"/>
+        <Slider x:Name="FontSizeSlider" HorizontalAlignment="Left" Margin="168,31,0,0" VerticalAlignment="Top" Width="374" ValueChanged="FontSizeSlider_ValueChanged" Minimum="1" Maximum="100"/>
+        <TextBlock x:Name="Text_FontSizeSliderValue" HorizontalAlignment="Left" Margin="150,32,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
